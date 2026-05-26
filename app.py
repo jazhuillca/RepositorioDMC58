@@ -8,7 +8,7 @@ st.write("Elaborado por: Jazmin Huillca")
 
 st.sidebar.image("DMC.png")
 
-sesion = st.sidebar.selectbox("Seleccione una sesión",["Sesion 1","Sesion 2", "Sesion 3", "Sesion 4"])
+sesion = st.sidebar.selectbox("Seleccione una sesión",["Sesión 1","Sesión 2", "Sesión 3", "Sesión 4"])
 
 if sesion == "Sesión 1":
   st.write("Bienvenido a la sesión 1")
@@ -17,10 +17,11 @@ if sesion == "Sesión 1":
 elif sesion == "Sesión 2":
   st.write("Bienvenido a la sesión 2")
 
-  precio = st.number_input("Ingrese el precio del producto")
-  descuento = st.number_input("Ingrese el descuento del producto")
+  precio = st.number_input("Ingrese el precio del producto", min_value = 0 , max_value = 5000 , value =1200)
+  descuento = st.number_input("Ingrese el descuento del producto del 0 al 100%", min_value = 0 , max_value = 100)
 
-precio_final_producto = precio - (precio*descuento)
+  precio_final_producto = precio - (precio*(descuento/100))
+  st.write("El precio final del producto es: ", precio_final_producto)
 
 elif sesion == "Sesión 3":
   st.write("Bienvenido a la sesión 3")

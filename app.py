@@ -25,7 +25,7 @@ elif sesion == "Sesión 2":
 
   precio = st.number_input("Ingrese el precio del producto", min_value = 0 , max_value = 5000 , value =1200)
 
-  elif sesion == "Sesión 3":
+elif sesion == "Sesión 3":
 
   st.write("Bienvenido la sesión 3")
 
@@ -38,6 +38,3 @@ elif sesion == "Sesión 2":
 else:
 
   st.write("Bienvenido la sesión 4")
-elif sesion == "Sesión 3":
-  st.write("Bienvenido a la Sesión 3")
-  inicio_rango = st.slider("seleccione un valor",min_value = 0, max_value=20, value =7)

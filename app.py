@@ -11,6 +11,11 @@ st.write("Elaborado por: Jazmin Huillca")
 
 st.sidebar.image("DMC.png")
 
+add_selectbox = st.sidebar.selectbox(
+  "How would you like to be contacted?",
+  ("Email", "Home phone", "Mobile phone")
+)
+
 sesion = st.sidebar.selectbox("Seleccione una sesión",["Sesión 1","Sesión 2", "Sesión 3", "Sesión 4"])
 
 if sesion == "Sesión 1":
